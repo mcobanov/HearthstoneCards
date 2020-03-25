@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: Friz;
+    src: url('./assets/fonts/Friz Quadrata Bold.otf');
+}
+
+* {
+    font-family: Friz;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-image: url('./assets/images/bg.jpg');
+    background-repeat: no-repeat;
+    // background-position: center;
+    background-size: cover;
+}
