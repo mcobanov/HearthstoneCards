@@ -1,18 +1,31 @@
 $linkHover: #0098dfe5;
+$accentColor: #004c8a;
+
+ul {
+    margin: 0;
+    display: flex;
+}
+
 header {
-    z-index: 10;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    width: 100%;
+    height: 50px;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: none;
+    // background-color: #004c8a;
 }
 
 .logo {
     user-select: none;
+    margin-left: 40px;
 }
 
 li {
     list-style: none;
+    text-align: center;
 }
 
 .nav_links {
@@ -20,19 +33,25 @@ li {
 }
 
 .nav_links {
-    li {
-        height: 40px;
-        line-height: 40px;
+    a {
+        // height: 50px;
+        // line-height: 50px;
         cursor: pointer;
         display: inline-block;
-        padding: 0 20px;
+        // padding: 0 20px;
         color: white;
-        border-radius: 4px;
         transition: background-color 500ms;
         user-select: none;
     }
 }
 
-.nav_links li:hover {
+.nav_links a:hover {
     background-color: $linkHover;
+}
+
+li a {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 1em;
+        min-width: 100px;
 }
