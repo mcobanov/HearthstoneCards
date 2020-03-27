@@ -5,11 +5,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardsComponent } from './cards/cards.component';
+import { CardbacksComponent } from './cardbacks/cardbacks.component';
+import { SetDetailComponent } from './set-detail/set-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardsComponent
+    CardsComponent,
+    CardbacksComponent,
+    SetDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,8 @@
 $linkHover: #0098dfe5;
 $accentColor: #004c8a;
+.active {
+    background-color: $accentColor;
+}
 
 ul {
     margin: 0;
@@ -7,7 +10,7 @@ ul {
 }
 
 header {
-    background-color: rgba($color: #000000, $alpha: 0.2);
+    background-color: rgba($color: #313131, $alpha: 0.6);
     width: 100%;
     height: 50px;
     top: 0;
@@ -15,7 +18,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // background-color: #004c8a;
 }
 
 .logo {
@@ -34,11 +36,8 @@ li {
 
 .nav_links {
     a {
-        // height: 50px;
-        // line-height: 50px;
         cursor: pointer;
         display: inline-block;
-        // padding: 0 20px;
         color: white;
         transition: background-color 500ms;
         user-select: none;
@@ -50,8 +49,11 @@ li {
 }
 
 li a {
-        color: #ffffff;
-        text-decoration: none;
-        padding: 1em;
-        min-width: 100px;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    // padding: 1em;
+    min-height: 50px;
+    min-width: 120px;
 }

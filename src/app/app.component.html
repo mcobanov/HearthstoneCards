@@ -2,9 +2,9 @@
 <img src="../assets/images/Hearthstone_Logo.png" alt="logo" class='logo' width='150px'>
   <nav>
     <ul class="nav_links">
-      <li><a href="#" routerLink="/">Sets</a></li>
-      <li><a href="#" routerLink="/cardbacks">Cardbacks</a></li>
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Sets</a></li>
+      <li><a routerLink="/cardbacks" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >Cardbacks</a></li>
     </ul>
   </nav>
 </header>
-<app-cards></app-cards>
+<router-outlet></router-outlet>

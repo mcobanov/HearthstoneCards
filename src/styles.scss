@@ -19,4 +19,14 @@ body {
     background-repeat: no-repeat;
     // background-position: center;
     background-size: cover;
+    overflow: hidden;
+}
+
+.loading {
+    text-align: center;
+    color: #fff;
+    width: 200px;
+    height: 20px;
+    margin: 20px auto 0 auto;
+    user-select: none;
 }

@@ -4,25 +4,29 @@
     width: 90%;
     margin: 20px auto;
     align-items: center;
-    justify-content: center;
 }
+
 .set_a {
     display: table;
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: 1px solid;
-    border-image: linear-gradient(to bottom, #ffe23b 0%, #c47b0d 100%);
-    border-image-slice: 1;
-    border-width: 2px;
-    width: 180px;
-    height: 120px;
+    // padding: 15px;
+    background-image: url('../../assets/images/ItemBg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 250px 170px;
+    // background-color: rgba(0, 0, 0, 0.5);
+    color: #0f0f0f;
+    // border: 1px solid;
+    // border-image: linear-gradient(to bottom, #ffe23b 0%, #c47b0d 100%);
+    // border-image-slice: 1;
+    // border-width: 2px;
+    width: 250px;
+    height: 170px;
     margin: 10px;
     transition: background-color 500ms;
     text-decoration: none;
     text-align: center;
     user-select: none;
-
+    transition: background-image 800ms;
     // a{
     //     text-align: center;
     //     vertical-align: middle;
@@ -32,18 +36,23 @@
     //     user-select: none;
     // }
     span {
+        padding: 15px;
         display: table-cell;
         vertical-align: middle;
     }
-
 }
 
 .set_a:hover {
-    background-color:rgba(31, 31, 31, 0.5);
+    // background-color: rgba(31, 31, 31, 0.5);
+    background-image: url('../../assets/images/ItemActive.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 250px 170px;
+    transition: background-image 500ms;
     cursor: pointer;
 }
 
-.set_p, .loading {
+.set_p {
     text-align: center;
     color: #fff;
     width: 200px;
