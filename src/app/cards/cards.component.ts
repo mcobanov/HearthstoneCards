@@ -19,13 +19,6 @@ export class CardsComponent implements OnInit {
       this.info = data;
       this.sets = this.info['standard'];
     })
-    // this._config.getToken().subscribe(token => {
-    //   this.accessToken = token['access_token'];
-    //   this._config.getCardbacks().subscribe(cardbacks => {
-    //     console.log(cardbacks);
-    //   })
-    //   console.log(this.accessToken);
-    // })
   }
 
 }

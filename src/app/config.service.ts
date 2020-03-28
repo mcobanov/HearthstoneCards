@@ -37,23 +37,8 @@ export class ConfigService {
     return this.http.get('https://omgvamp-hearthstone-v1.p.rapidapi.com/info', httpOptions);
   }
 
-  getCardbacks() {
-    this.getToken().subscribe(token => {
+  getCardbacks(token: Object) {
       this.accessToken = token['access_token'];
-      console.log(this.accessToken);
-      this.http.get(`https://us.api.blizzard.com/hearthstone/cardbacks?access_token=${this.accessToken}`).subscribe(data => {
-        this.cardbacks = data;
-        console.log(this.cardbacks);
-      })
-    });
-    console.log(this.cardbacks);
-    return this.cardbacks;
-    // let bearerOptions = {
-    //   headers: new HttpHeaders({
-    //     'Content-Type': 'application/x-www-form-urlencoded',
-    //     'Authorization': 'Bearer ' + this.accessToken
-    //   })
-    // };
-
+      return this.http.get(`https://us.api.blizzard.com/hearthstone/cardbacks?access_token=${this.accessToken}`)
   }
 }

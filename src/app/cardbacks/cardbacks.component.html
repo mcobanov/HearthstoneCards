@@ -1,4 +1,4 @@
 <div class="loading" *ngIf='!cardbacks'> LOADING...</div>
 <div class="cardbacks_container">
-    <img *ngFor="let cardback of cardbacks" src="{{cardback.imgAnimated}}" alt="{{cardback.name}}" width="306" height="464">
+    <img *ngFor="let cardback of cardbacks" src="{{cardback.image}}" alt="{{cardback.name['en_US']}}" width="280" height="386">
 </div>

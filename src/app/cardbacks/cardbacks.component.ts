@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from '../config.service';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-cardbacks',
@@ -17,12 +16,18 @@ export class CardbacksComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this._config.getToken().subscribe(val => {
+      this._config.getCardbacks(val).subscribe( data => {
+        this.cardbacks = data['cardBacks'];
+        console.log(this.cardbacks);
+      })
+    });
+
     // const token = this._config.getToken().subscribe( data => {return data['access_token']});
     // console.log(token);
     // this._config.getCardbacks().subscribe(data => {
     //   console.log(data);
     // })
-    this._config.getCardbacks().subscribe(data => console.log(data));
 
   }
 
