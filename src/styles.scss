@@ -18,9 +18,8 @@ body {
     height: 100%;
     background-image: url('./assets/images/bg.jpg');
     background-repeat: no-repeat;
-    // background-position: center;
+    background-attachment: fixed;
     background-size: cover;
-    overflow: hidden;
 }
 
 @keyframes scale {
