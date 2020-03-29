@@ -8,17 +8,15 @@ import { ConfigService } from '../config.service';
 })
 export class CardsComponent implements OnInit {
 
-  info: Object;
-  sets: [];
-  accessToken: string = '';
+  sets: Object;
 
   constructor(private _config: ConfigService) { }
 
   ngOnInit(): void {
-    this._config.getInfo().subscribe(data => {
-      this.info = data;
-      this.sets = this.info['standard'];
-    })
-  }
-
+    this._config.getToken().subscribe(token => {
+      this._config.getSets(token['access_token']).subscribe( data => {
+        this.sets = data;
+      })
+    });
+}
 }

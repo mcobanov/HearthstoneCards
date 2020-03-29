@@ -1,4 +1,17 @@
 <div class="loading" *ngIf='!cardbacks'> LOADING...</div>
 <div class="cardbacks_container">
-    <img *ngFor="let cardback of cardbacks" src="{{cardback.image}}" alt="{{cardback.name['en_US']}}" width="280" height="386">
+    <div *ngFor="let cardback of cardbacks"  class="img_container">
+        <div class="card_inner">
+            <div class="card_front">
+                <img src="{{cardback.image}}" alt="{{cardback.name['en_US']}}" width="280" height="386">
+            </div>
+            <div class="card_back">
+                <div class="img_desc">
+                    <p class="card_title">{{cardback.name['en_US']}}</p>
+                    <p class="card_desc">{{cardback.text['en_US']}}</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

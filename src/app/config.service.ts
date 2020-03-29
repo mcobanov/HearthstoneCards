@@ -12,14 +12,6 @@ const tokenOptions = {
   })
 };
 
-const httpOptions = {
-  headers: new HttpHeaders({
-    "x-rapidapi-host": "omgvamp-hearthstone-v1.p.rapidapi.com",
-    "x-rapidapi-key": "400778b158mshf5ec7372bccb6cfp1dafeajsn4ed5f898871b"
-  })
-};
-
-
 @Injectable({
   providedIn: 'root'
 })
@@ -33,12 +25,15 @@ export class ConfigService {
     return this.http.post('https://us.battle.net/oauth/token', 'grant_type=client_credentials', tokenOptions);
   }
 
-  getInfo() {
-    return this.http.get('https://omgvamp-hearthstone-v1.p.rapidapi.com/info', httpOptions);
+  getSets(token: string) {
+    return this.http.get(`https://us.api.blizzard.com/hearthstone/metadata/sets?access_token=${token}`);
   }
 
-  getCardbacks(token: Object) {
-      this.accessToken = token['access_token'];
-      return this.http.get(`https://us.api.blizzard.com/hearthstone/cardbacks?access_token=${this.accessToken}`)
+  getCardbacks(token: string) {
+    return this.http.get(`https://us.api.blizzard.com/hearthstone/cardbacks?access_token=${token}`)
+  }
+
+  getCards(set: string, token: string) {
+    return this.http.get(`https://us.api.blizzard.com/hearthstone/cards?set=${set}&access_token=${token}`)
   }
 }

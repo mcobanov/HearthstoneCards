@@ -1,5 +1,5 @@
-<div class="loading" *ngIf='!sets'> LOADING...</div>
-<p class="set_p" *ngIf="sets">STANDARD</p>
+<div class="loading" *ngIf='!sets'>LOADING...</div>
+<p class="set_p" *ngIf="sets">CURRENT CARD SETS</p>
 <div class="set_container">
-    <a *ngFor="let set of sets" class="set_a" href="#" routerLink="/{{ set }}"><span>{{ set }}</span></a>
+    <a *ngFor="let set of sets" class="set_a" href="#" [routerLink]="['/', set['slug']]"><span>{{ set['name']['en_US'] }}</span></a>
 </div>

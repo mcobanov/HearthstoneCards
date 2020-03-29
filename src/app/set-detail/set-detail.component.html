@@ -1,1 +1,6 @@
-<p>set-detail works!</p>
+<div class="loading" *ngIf='!cards'> LOADING...</div>
+<div class="cards_container">
+    <div *ngFor="let card of cards" class="img_container">
+        <img src="{{card['image']['en_US']}}" alt="{{card.name['en_US']}}" width="280" height="386">
+    </div>
+</div>

@@ -1,0 +1,17 @@
+.cards_container {
+    width: 100%;
+    height: calc(100vh - 50px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    // align-content: space-around;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    margin: auto;
+    img {
+        // white-space: normal;
+        display: block;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+}
